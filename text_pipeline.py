@@ -8,6 +8,8 @@ from numpy import ndarray
 
 nltk.download('stopwords')
 nltk.download('wordnet')
+
+
 class TextPipeline:
     def __init__(self, text):
         self.__wnl = WordNetLemmatizer()
@@ -39,11 +41,14 @@ class TextPipeline:
         self._preprocess()
         self._remove_stopwords()
         self._lemmatize()
+        print(self.text)
         return self.text
 
     def vectorize_text(self) -> ndarray:
+        print(self.text)
         with open("./artifacts/vocab.txt", "r") as file:
             vocab = file.readlines()
+        vocab = [word.strip() for word in vocab]
         vector_array = []
         vector = np.zeros(len(vocab))
         words = self.text.split()
@@ -52,6 +57,6 @@ class TextPipeline:
                 vector[i] = 1
         print(len(vector))
         vector_array.append(vector)
-        np_array = np.array(vector_array, dtype=np.float32)
+        np_array = np.asarray(vector_array, dtype=np.float32)
         return np_array
 
