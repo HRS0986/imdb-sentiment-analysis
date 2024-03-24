@@ -4,7 +4,7 @@ name: Build and push images to Dockerhub
 on:
   push:
     branches:
-      - release/*
+      - master
     tags:
       - 'v*'
 #JOBS
