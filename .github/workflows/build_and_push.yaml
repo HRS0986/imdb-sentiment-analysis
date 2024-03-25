@@ -19,7 +19,7 @@ jobs:
         id: meta
         with:
           images: |
-            hirushafernando/imdb-review-analyzer
+            ${{secrets.DOCKERHUB_USERNAME}}/${{secrets.DOCKERHUB_REPO_NAME}}
           tags: |
             type=semver,pattern={{version}}
 
