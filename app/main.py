@@ -22,7 +22,7 @@ def predict(review: Review):
         model = pickle.load(file)
 
     prediction = int(model.predict(vector)[0])
-    sentiment = "Positive" if prediction == 1 else "Negative"
+    sentiment = "Positive" if prediction == 0 else "Negative"
     return sentiment
 
 @app.get("/", response_class=HTMLResponse)

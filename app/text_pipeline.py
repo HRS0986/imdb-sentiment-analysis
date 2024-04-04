@@ -47,8 +47,13 @@ class TextPipeline:
     def vectorize_text(self) -> ndarray:
         print(self.text)
         with open("app/artifacts/vocab.txt", "r") as file:
-            vocab = file.readlines()
-        vocab = [word.strip() for word in vocab]
+            vocab_d = file.readlines()
+        vocab = []
+        for w in vocab_d:
+            try:
+                vocab.append(w.strip())
+            except Exception as e:
+                vocab.append(str(w).strip())
         vector_array = []
         vector = np.zeros(len(vocab))
         words = self.text.split()

@@ -2060,7 +2060,6 @@ cans
 cant
 canvas
 canyon
-can´t
 cap
 capabilities
 capability
@@ -4311,7 +4310,6 @@ donofrio
 donovan
 dons
 dont
-don´t
 doo
 doom
 doomed
@@ -7774,7 +7772,6 @@ itthere
 itthis
 iturbi
 itv
-it´s
 iv
 ivan
 ive
@@ -7783,7 +7780,6 @@ ivory
 ivy
 iwerks
 izzard
-i´ve
 jabba
 jack
 jackal
@@ -14686,7 +14682,6 @@ thati
 thatll
 thats
 thatthe
-that´s
 thcentury
 theater
 theaters
@@ -16402,10 +16397,4 @@ zorro
 zu
 zucco
 zucker
-iek
-
-
-£
-·
 à
-–
