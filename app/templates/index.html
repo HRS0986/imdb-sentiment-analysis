@@ -57,7 +57,7 @@
             <form class="flex w-full">
                 <div class="p-8 sm:p-10 lg:flex-auto">
                     <h3 class="text-2xl font-bold tracking-tight text-gray-900">Enter Your Text:</h3>
-                    <textarea name="text" placeholder="Enter text here to analyze" id="review-text"
+                    <textarea name="text" style="font-size: 25px;" placeholder="Enter text here to analyze" id="review-text"
                               class=" px-5 block w-full h-40 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         {{ review }}
                     </textarea>
@@ -92,7 +92,7 @@
         const result = document.getElementById("result-text");
         const status = document.getElementById("status");
         status.innerHTML = "Analyzing...";
-        fetch('http://127.0.0.1:8000/analyze', {
+        fetch('/analyze', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
