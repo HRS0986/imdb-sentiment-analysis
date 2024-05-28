@@ -1,5 +1,6 @@
 import pickle
 
+import uvicorn
 from fastapi import FastAPI, Request, Form
 from starlette.responses import HTMLResponse
 from starlette.templating import Jinja2Templates
@@ -28,3 +29,6 @@ def predict(review: Review):
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
     return templates.TemplateResponse(request=request, name="index.html", context={"predicted_sentiment": False, "review": ""})
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
